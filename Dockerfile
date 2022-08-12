@@ -1,7 +1,7 @@
 FROM node:14-buster-slim
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git-core ca-certificates \
+    && apt-get install -y --no-install-recommends git git-core ca-certificates \
     && npm -g install @semantic-release/git @semantic-release/github semantic-release
 
 ENTRYPOINT [ "/bin/bash"]
