@@ -28,9 +28,9 @@ spec:
           workspace: workspace
           subPath: source
 
-    - name: tag
+    - name: semantic-versioning
       taskRef:
-        name: git-tag
+        name: semantic-versioning
       runAfter:
         - clone
       params: []
@@ -43,7 +43,7 @@ spec:
       taskRef:
         name: kaniko-build
       runAfter:
-        - tag
+        - semantic-versioning
       params:
         - name: IMAGE
           value: $(params.registry)/$(params.git-repository-name):$(params.git-revision)

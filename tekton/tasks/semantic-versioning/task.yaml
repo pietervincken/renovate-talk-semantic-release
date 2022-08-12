@@ -1,0 +1,27 @@
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: semantic-versioning
+  labels:
+    app.kubernetes.io/version: "0.1"
+  annotations:
+    tekton.dev/displayName: "semantic versioning"
+spec:
+  workspaces:
+    - name: source
+      description: A workspace that contains the fetched git repository.
+  params: []
+  results:
+    - name: version
+      description: The calculated version
+
+  steps:
+    - name: semantic-versioning
+      image: renovatetalkacr.azurecr.io/pietervincken/semanticversioning:0.0.0
+      workingDir: $(workspaces.source.path)
+      env: []
+      script: |
+        #!/usr/bin/env sh
+        set -eu
+        semantic-release

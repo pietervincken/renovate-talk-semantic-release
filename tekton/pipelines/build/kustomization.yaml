@@ -8,5 +8,5 @@ components:
 resources:
   - ../../tasks/git-clone
   - ../../tasks/kaniko-build
-  - ../../tasks/git-tag
+  - ../../tasks/semantic-versioning
   - pipeline.yaml
