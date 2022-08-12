@@ -18,7 +18,7 @@ spec:
 
   steps:
     - name: semantic-versioning
-      image: renovatetalkacr.azurecr.io/pietervincken/semanticversioning:0.0.0
+      image: renovatetalkacr.azurecr.io/pietervincken/semanticversioning:0.0.1
       workingDir: $(workspaces.source.path)
       env: []
       script: |
