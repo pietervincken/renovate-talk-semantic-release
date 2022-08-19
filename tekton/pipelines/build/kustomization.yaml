@@ -7,6 +7,6 @@ components:
 
 resources:
   - pipeline.yaml
-  - git:ssh://git@github.com:pietervincken/tekton-catalog.git//tasks/git-clone?ref=1.0.0
-  - git:ssh://git@github.com:pietervincken/tekton-catalog.git//tasks/semantic-versioning?ref=1.0.0
-  - git:ssh://git@github.com:pietervincken/tekton-catalog.git//tasks/kaniko-build?ref=1.0.0
+  - git::ssh://git@github.com:pietervincken/tekton-catalog.git//tasks/git-clone?ref=1.0.0
+  - git::ssh://git@github.com:pietervincken/tekton-catalog.git//tasks/semantic-versioning?ref=1.0.0
+  - git::ssh://git@github.com:pietervincken/tekton-catalog.git//tasks/kaniko-build?ref=1.0.0
