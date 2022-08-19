@@ -27,7 +27,7 @@ plugins:
   #           numReplacements: 1
   # - path: "@semantic-release/github"
   - path: "@semantic-release/exec"
-    prepareCmd: "./set_kustomize_image.sh ${nextRelease.version}"
+    prepareCmd: "sh set_kustomize_image.sh ${nextRelease.version}"
   # - path: "@codedependant/semantic-release-docker"
   #   dockerPublish: false
   #   dockerImage: renovate-talk-semantic-release
