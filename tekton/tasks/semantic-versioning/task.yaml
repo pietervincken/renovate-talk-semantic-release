@@ -32,7 +32,7 @@ spec:
 
         cat << EOF > set_kustomize_image.sh
         #!/bin/bash
-        echo \$1 > VERSION
+        echo -n \$1 > VERSION
 
         cd kustomize
         kustomize edit set image $(params.image_repository):\$1
