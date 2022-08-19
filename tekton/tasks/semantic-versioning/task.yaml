@@ -46,5 +46,5 @@ spec:
           cat VERSION | tee "$(results.version.path)"
         else
           echo "Didn't find version, reverting to branch name."
-          echo "$(params.revision)" | tee "$(results.version.path)"
+          echo -n "$(params.revision)" | tee "$(results.version.path)"
         fi
