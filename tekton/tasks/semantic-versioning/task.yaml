@@ -30,7 +30,7 @@ spec:
         #!/usr/bin/env sh
         set -eu
 
-        cat << EOF > hack/set_kustomize_image.sh
+        cat << EOF > set_kustomize_image.sh
         #!/bin/bash
         echo $1 > VERSION
 
