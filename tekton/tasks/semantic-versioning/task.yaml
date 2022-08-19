@@ -11,11 +11,14 @@ spec:
   workspaces:
     - name: source
       description: A workspace that contains the fetched git repository.
-  params: 
+  params:
     - name: revision
       description: branch name. Used in case of non-release build
       type: string
-      default: ""
+
+    - name: image_repository
+      description: name of the image repository used
+      type: string
   results:
     - name: version
       description: The calculated version
@@ -26,6 +29,15 @@ spec:
       script: |
         #!/usr/bin/env sh
         set -eu
+
+        cat << EOF > hack/set_kustomize_image.sh
+        #!/bin/bash
+        echo $1 > VERSION
+
+        cd kustomize
+        kustomize edit set image $(params.image_repository):$1
+        EOF
+
         npx semantic-release --no-ci
 
         if [ -f "VERSION" ];then
@@ -36,5 +48,3 @@ spec:
           echo "Didn't find version, reverting to branch name."
           echo "$(params.revision)" | tee "$(results.version.path)"
         fi
-
-        

@@ -36,6 +36,8 @@ spec:
       params:
         - name: revision
           value: $(params.git-revision)
+        - name: image_repository
+          value: $(params.registry)/$(params.git-repository-name)
       workspaces:
         - name: source
           workspace: workspace
