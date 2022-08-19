@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/pietervincken/renovate-talk-semantic-release/compare/v1.0.0...v1.1.0) (2022-08-19)
+
+
+### Features
+
+* added support for branch builds ([2ec865f](https://github.com/pietervincken/renovate-talk-semantic-release/commit/2ec865f43080a9447d84fc1bb2e651a50ac4cdce))
+
 ## 1.0.0 (2022-08-19)
 
 
