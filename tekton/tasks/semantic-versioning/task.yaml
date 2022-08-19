@@ -24,4 +24,4 @@ spec:
       script: |
         #!/usr/bin/env sh
         set -eu
-        semantic-release
+        npx semantic-release
