@@ -33,7 +33,9 @@ spec:
         name: semantic-versioning
       runAfter:
         - clone
-      params: []
+      params:
+        - name: revision
+          value: $(params.git-revision)
       workspaces:
         - name: source
           workspace: workspace

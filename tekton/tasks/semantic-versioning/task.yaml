@@ -11,17 +11,30 @@ spec:
   workspaces:
     - name: source
       description: A workspace that contains the fetched git repository.
-  params: []
+  params: 
+    - name: revision
+      description: branch name. Used in case of non-release build
+      type: string
+      default: ""
   results:
     - name: version
       description: The calculated version
-
   steps:
     - name: semantic-versioning
       image: pietervincken/semanticversioning:0.0.4
       workingDir: $(workspaces.source.path)
-      env: []
       script: |
         #!/usr/bin/env sh
         set -eu
         npx semantic-release --no-ci
+
+        if [ -f "VERSION" ];then
+          echo "Found released version"
+          cat VERSION
+          cat VERSION | tee "$(results.version.path)"
+        else
+          echo "Didn't find version, reverting to branch name."
+          echo "$(params.revision)" | tee "$(results.version.path)"
+        fi
+
+        
