@@ -50,7 +50,7 @@ spec:
         - semantic-versioning
       params:
         - name: IMAGE
-          value: $(params.registry)/$(params.git-repository-name):$(params.git-revision)
+          value: $(params.registry)/$(params.git-repository-name):$(tasks.semantic-versioning.results.version)
       workspaces:
         - name: source
           workspace: workspace
