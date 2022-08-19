@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/pietervincken/renovate-talk-semantic-release/compare/v1.2.0...v1.3.0) (2022-08-19)
+
+
+### Features
+
+* fix something important ([d458a78](https://github.com/pietervincken/renovate-talk-semantic-release/commit/d458a7898b9d0735688e4b00aa654a0de86a51e8))
+
 ## [1.2.0](https://github.com/pietervincken/renovate-talk-semantic-release/compare/v1.1.1...v1.2.0) (2022-08-19)
 
 
