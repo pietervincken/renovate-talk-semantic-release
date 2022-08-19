@@ -1,3 +1,15 @@
+## [1.2.0](https://github.com/pietervincken/renovate-talk-semantic-release/compare/v1.1.1...v1.2.0) (2022-08-19)
+
+
+### Features
+
+* switch to semver version ([54794b0](https://github.com/pietervincken/renovate-talk-semantic-release/commit/54794b04f603164c6452e79f55736b45994f6088))
+
+
+### Bug Fixes
+
+* broken whitespace ([73250d7](https://github.com/pietervincken/renovate-talk-semantic-release/commit/73250d70f25f26c1d64dfa9c18914cfdb36565f1))
+
 ## [1.1.1](https://github.com/pietervincken/renovate-talk-semantic-release/compare/v1.1.0...v1.1.1) (2022-08-19)
 
 
