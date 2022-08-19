@@ -13,31 +13,9 @@ plugins:
   - path: "@semantic-release/commit-analyzer"
   - path: "@semantic-release/release-notes-generator"
   - path: "@semantic-release/changelog"
-  # replaces the version in the version badge
-  # - path: "@google/semantic-release-replace-plugin"
-  #   replacements:
-  #     - files: ["README.md"]
-  #       from: "\\!\\[Version: (.*)\\]\\(https:\\/\\/img\\.shields\\.io\\/badge\\/version-(.*)-informational\\)"
-  #       to: "![Version: ${nextRelease.version}](https://img.shields.io/badge/version-${nextRelease.version}-informational)"
-  #       countMatches: true
-  #       results:
-  #         - file: README.md
-  #           hasChanged: true
-  #           numMatches: 1
-  #           numReplacements: 1
   # - path: "@semantic-release/github"
   - path: "@semantic-release/exec"
     prepareCmd: "sh set_kustomize_image.sh ${nextRelease.version}"
-  # - path: "@codedependant/semantic-release-docker"
-  #   dockerPublish: false
-  #   dockerImage: renovate-talk-semantic-release
-  #   dockerTags:
-  #     - latest
-  #     - "{{version}}"
-  #     - "{{major}}"
-  #     - "{{major}}.{{minor}}"
-  # commits the updated versions in the following files
-  # should always be last
   - path: "@semantic-release/git"
     assets:
       - CHANGELOG.md
