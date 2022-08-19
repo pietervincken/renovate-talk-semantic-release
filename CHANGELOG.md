@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/pietervincken/renovate-talk-semantic-release/compare/v1.1.0...v1.1.1) (2022-08-19)
+
+
+### Bug Fixes
+
+* missing folder ([121eabb](https://github.com/pietervincken/renovate-talk-semantic-release/commit/121eabb485f87d152fc41c40fd7470d33f501ae7))
+* properly escape ([c005bca](https://github.com/pietervincken/renovate-talk-semantic-release/commit/c005bca389957ea2484844ae7848c012817782f3))
+
 ## [1.1.0](https://github.com/pietervincken/renovate-talk-semantic-release/compare/v1.0.0...v1.1.0) (2022-08-19)
 
 
